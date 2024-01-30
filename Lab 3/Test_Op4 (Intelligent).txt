@@ -1,0 +1,10 @@
+A[4] B[4] OPout[8] 
+0000 0000 00000000 # Only case we get eight 0's since since all the bits are low
+0011 1110 00000001 
+1001 0010 00000001
+1001 0011 00000001
+1001 0100 00000001 
+1000 0000 00000001 # One 1 in A
+0000 0100 00000001 # One 1 in B
+
+# Remaining are random examples where we have atleast one 1 in the input resulting in 00000001 output

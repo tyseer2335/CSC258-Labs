@@ -1,0 +1,11 @@
+A[4] B[4] OPout[8] 
+1111 1111 11111111 # If all ones in both inputs putting them togeither we have 8 ones  
+0000 0000 00000000 # Same as the last one, but with 0s
+1100 1010 11001010 # Concatenating 1100 and 1010 gives use 11001010 
+1011 0101 10110101 
+1110 1101 11101101 
+1010 0011 10100011 
+0001 1011 00011011 
+0011 0101 00110101 
+
+# Rest of the examples are just concatanating A to B 

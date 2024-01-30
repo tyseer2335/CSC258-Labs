@@ -1,0 +1,16 @@
+# Test vectors for 4-bit Ripple Carry Adder
+# A[4] and B[4] are the binary inputs, Cin is the carry-in,
+# S[4] is the expected 4-bit sum output, and Cout is the expected carry-out.
+
+A[4] B[4] Cin S[4] Cout
+0000 0000 0 0000 0    # Adding zero to zero without carry-in, this should give is zero (0 + 0 = 0)
+0101 0010 0 0111 0    # No carry across all bits, simple addition. (5 + 2 = 7)
+0110 0001 1 1000 0    # Test vector with carry-in; result does not require carry-out. (6 + 1 = 8? because of carry in)
+1001 0111 0 0000 1    # Carry propagates through all bits with carry-out. (9 + 7 = 0) since our output is 5 bits and the last bit is stored in or cout so it should be 10000 = 16
+1111 0001 0 0000 1    # Adds the maximum 4-bit number (15 because 2^4 - 1) to one, causing an overflow with carry-out (carry out 1, output 0000 which is 16 like last example).
+1111 0001 1 0001 1    # Maximum value with carry-in, overflow affects sum and Cout. (15 + 1 = 1? & 10001 is 17)
+1111 1111 0 1110 1    # Largest possible sum without carry-in, with overflow to Cout. (15 + 15 = 14? & 11110 = 30)
+1111 1111 1 1111 1    # Largest possible sum with carry-in, with overflow to Cout. (15 + 15 = 15? & 11111 = 31)
+0111 1000 0 1111 0    # No carry-out with a sum less than maximum value. (7 + 8 = 15)
+0111 1000 1 0000 1    # Carry-in leads to overflow with carry-out. (7 + 8 = 0? & 10000 is 16 because of carry)
+1011 0011 0 1110 0    # Addition without carry-in that doesn't generate carry-out. (11 + 3 = 14)

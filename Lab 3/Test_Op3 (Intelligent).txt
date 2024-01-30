@@ -1,0 +1,10 @@
+A[4] B[4] OPout[8] 
+0000 0000 00000000 # When we have all 0s the OR and XOR gates should be all zero 
+1111 0000 11111111 # All 1 since firs 4 are 1, and last 4 there is only one 1s.
+1010 0101 11111111 # Has a one 1 in each bit, thus XOR and OR should all be 1s as output 
+1111 1111 11110000 # All the OR's in the First digits should be 1, but the since the last 4 are XOR it should be 0  
+0101 1010 11111111 # Least significant bits are not the same 
+1001 0110 11111111 # Random mix of 1s and zeros 
+
+# 0123 4567 
+# -OR- -XOR-
