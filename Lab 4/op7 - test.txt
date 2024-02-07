@@ -1,0 +1,8 @@
+A[4] B[4] OPout[8]
+0000 0000 00000000 # Tests multiplying by zero, which should always result in zero.
+0001 0001 00000001 # Tests multiplying by one, which should result in the other number unchanged.
+1010 0101 00110010 # Tests multiplying two non-trivial numbers, (10 and 5 in this case) which is 50.
+0001 1011 00001011 # Tests multiplying (1 x 11 = 11)
+1100 1100 10010000 # Tests multiplying two identical non-trivial numbers. (12 x 12 = 144)
+1001 0110 00110110 # Tests multiplying two complementary numbers. (9 x 6 = 54)
+1111 1111 11100001 # Tests largiest 4 bit number (15 x 15 = 225) Maximum

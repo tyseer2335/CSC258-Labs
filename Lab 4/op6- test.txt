@@ -1,0 +1,6 @@
+A[4] B[4] OPout[8]
+0000 0000 00000000 # Shifting by 0 should be the same number
+0001 0100 00000010 # Shift 1 bit to the right  
+0010 1000 00000010 # Shift 2 bits to right 
+0001 0001 00000000 # Shift 1 bit to the right, off the edge
+1111 0110 00000000 # Shift 15 bits off the edge
